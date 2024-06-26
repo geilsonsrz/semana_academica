@@ -1,0 +1,37 @@
+// Fonte
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+// Componentes
+@import './tela_inicio.scss';
+
+
+
+.tela {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+
+    .conteiner {
+        width: 95%;
+        height: 85%;
+    }
+}
+
+
+#inscricao {
+    background-color: #550033;
+}
+
+#programacoes {
+    background-color: #991199;
+}
+
+#contato {
+    background-color: #cc3311;
+}

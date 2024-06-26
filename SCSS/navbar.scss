@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+:root {
+    --n2cor1: #050505;
+    --n2cor2: #ff4700;
+    --n2cor3: #f2f2f2;
+    --n2cor4: #ee0000;
+    --n2cor5: #00ee00;
+    --n2cor6: #0000ee;
+}
+
+
+.navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--n2cor1);
+    color: var(--n2cor2);
+    position: fixed;
+    border-radius: 0 0 .5rem .5rem;
+    width: 100%;
+    height: 2.5rem;
+
+    .item-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        user-select: none;
+        height: 1.5em;
+    }
+
+    .icon-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        opacity: 0;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        transition: .5s;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    .txt-navbar {
+        font-family: 'Roboto Mono', monospace;
+        text-transform: uppercase;
+        font-size: .5rem;
+        letter-spacing: .1rem;
+        transition: .3s;
+    }
+}
+
+
+.ativo {
+    .icon-navbar {
+        transform: translateY(1.5rem);
+        opacity: 1;
+        background: var(--n2cor1);
+    }
+
+    .txt-navbar {
+        color: var(--n2cor3);
+        animation: efeitoNavbar .3s infinite;
+    }
+}
+
+
+@keyframes efeitoNavbar {
+    25% {
+        transform: translateX(.1rem) translateY(.1rem);
+        text-shadow: -0.1rem -0.1rem .2rem var(--n2cor4);
+    }
+
+    50% {
+        transform: translateX(-0.1rem) translateY(-0.1rem);
+        text-shadow: 0.1rem 0.1rem .2rem var(--n2cor4);
+    }
+
+    75% {
+        transform: translateX(-0.1rem) translateY(.1rem);
+        text-shadow: 0.1rem -0.1rem .2rem var(--n2cor5);
+    }
+
+    100% {
+        transform: translateX(.1rem) translateY(-0.1rem);
+        text-shadow: -0.1rem 0.1rem .2rem var(--n2cor5);
+    }
+}
