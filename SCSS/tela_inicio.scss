@@ -7,9 +7,44 @@
     .conteiner {
         margin-top: 15%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+
+
 
         background-color: red;
+
+        
+        .titulo {
+            font-size: 2.5rem;
+        }
+
+        .subtitulo {
+            font-size: 1.5rem;
+
+            span {
+                position: relative;
+                color: rgba(255, 255, 255, .1);
+                animation: displayTexto 6s infinite;
+                animation-delay: calc(-3s * var(--i));
+            }
+        }
+        
+    }
+}
+
+
+@keyframes displayTexto {
+    0% {
+        display: inline-block;
+    }
+
+    50% {
+        display: none;
+    }
+
+    100% {
+        display: none;
     }
 }
