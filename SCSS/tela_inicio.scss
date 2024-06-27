@@ -35,7 +35,6 @@
                 color: var(--tela1-cor-subtitulo);
 
                 span {
-                    position: relative;
                     color: var(--tela1-cor-subtitulo);
                     animation: efeitoTexto 6s infinite;
                     animation-delay: calc(2s * var(--i));
