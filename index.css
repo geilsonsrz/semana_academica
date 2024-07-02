@@ -9,6 +9,11 @@
   --n2cor6: #0000ee;
 }
 
+.areaNavbar {
+  position: absolute;
+  z-index: 100;
+}
+
 .navbar {
   display: inline-flex;
   align-items: center;
@@ -62,7 +67,6 @@
 }
 .ativo .txt-navbar {
   color: var(--n2cor3);
-  animation: efeitoNavbar 0.3s infinite;
 }
 
 @keyframes efeitoNavbar {
@@ -84,9 +88,9 @@
   }
 }
 :root {
-  --tela1-background: #005588;
+  --tela1-background: #87CEEB;
   --tela1-cor-titulo: #000;
-  --tela1-cor-subtitulo: #000;
+  --tela1-cor-subtitulo: #fff;
   --tela1-cor-efeito-texto: #fff;
 }
 
@@ -95,10 +99,11 @@
 }
 #inicio .conteiner {
   margin-top: 15%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   user-select: none;
 }
 #inicio .conteiner .texto {
@@ -111,21 +116,128 @@
   color: var(--tela1-cor-titulo);
 }
 #inicio .conteiner .texto .subtitulo {
+  display: flex;
+  gap: 0.5em;
+  width: 100%;
+  overflow: hidden;
+}
+#inicio .conteiner .texto .subtitulo .textoPrimario {
   color: var(--tela1-cor-subtitulo);
 }
-#inicio .conteiner .texto .subtitulo span {
+#inicio .conteiner .texto .subtitulo .textoSecundario {
+  position: relative;
   color: var(--tela1-cor-subtitulo);
-  animation: efeitoTexto 6s infinite;
-  animation-delay: calc(2s * var(--i));
+}
+#inicio .conteiner .texto .subtitulo .textoSecundario::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--tela1-background);
+  border-left: solid 0.1rem var(--tela1-cor-subtitulo);
+  animation: subtituloEfeito 4s infinite;
 }
 
-@keyframes efeitoTexto {
-  33.33% {
-    color: var(--tela1-cor-efeito-texto);
-    font-weight: 700;
+@keyframes subtituloEfeito {
+  0%, 100% {
+    left: 0%;
+  }
+  70% {
+    left: 100%;
+  }
+}
+:root {
+  --cor-ln-btn: #ff4700;
+  --cor-txt-btn: #fff;
+}
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+  height: 1.5em;
+}
+.botao:active {
+  transform: scale(0.98);
+}
+
+.btn-inscricao {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 1rem;
+  overflow: hidden;
+  animation: linhaBotao 4s infinite;
+  color: var(--cor-txt-btn);
+}
+.btn-inscricao .ln {
+  position: absolute;
+  background-color: var(--cor-ln-btn);
+}
+.btn-inscricao .ln1 {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 0.2rem;
+  animation: btnLn1 0.5s infinite;
+}
+.btn-inscricao .ln2 {
+  top: -100%;
+  right: 0;
+  width: 0.2rem;
+  height: 100%;
+  animation: btnLn2 0.5s infinite;
+}
+.btn-inscricao .ln3 {
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 0.2rem;
+  animation: btnLn3 0.5s infinite;
+}
+.btn-inscricao .ln4 {
+  bottom: -100%;
+  left: 0;
+  width: 0.2rem;
+  height: 100%;
+  animation: btnLn4 0.5s infinite;
+}
+
+@keyframes btnLn1 {
+  0% {
+    left: -100%;
   }
   100% {
-    color: var(--tela1-cor-subtitulo);
+    left: 100%;
+  }
+}
+@keyframes btnLn2 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes btnLn3 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes btnLn4 {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
   }
 }
 .tela {
@@ -160,5 +272,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 
 /*# sourceMappingURL=index.css.map */

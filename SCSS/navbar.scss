@@ -9,6 +9,10 @@
     --n2cor6: #0000ee;
 }
 
+.areaNavbar {
+    position: absolute;
+    z-index: 100;
+}
 
 .navbar {
     display: inline-flex;
@@ -70,7 +74,7 @@
 
     .txt-navbar {
         color: var(--n2cor3);
-        animation: efeitoNavbar .3s infinite;
+        // animation: efeitoNavbar .3s infinite;
     }
 }
 

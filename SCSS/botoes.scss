@@ -1,0 +1,112 @@
+:root {
+    --cor-ln-btn: #ff4700;
+    --cor-txt-btn: #fff;
+}
+
+// Configuração todas as âncoras
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    user-select: none;
+    height: 1.5em;
+
+    &:active {
+        transform: scale(.98);
+    }
+}
+
+
+.btn-inscricao {
+    position: relative;
+    font-size: 1.2rem;
+    padding: 1rem;
+    overflow: hidden;
+    animation: linhaBotao 4s infinite;
+    color: var(--cor-txt-btn);
+
+    .ln {
+        position: absolute;
+        background-color: var(--cor-ln-btn);
+    }
+
+    .ln1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: .2rem;
+        animation: btnLn1 .5s infinite;
+    }
+
+    .ln2 {
+        top: -100%;
+        right: 0;
+        width: .2rem;
+        height: 100%;
+        animation: btnLn2 .5s infinite;
+    }
+
+    .ln3 {
+        right: -100%;
+        bottom: 0;
+        width: 100%;
+        height: .2rem;
+        animation: btnLn3 .5s infinite;
+    }
+
+    .ln4 {
+        bottom: -100%;
+        left: 0;
+        width: .2rem;
+        height: 100%;
+        animation: btnLn4 .5s infinite;
+    }
+
+
+}
+
+
+@keyframes btnLn1 {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: +100%;
+    }
+}
+
+@keyframes btnLn2 {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: +100%;
+    }
+}
+
+@keyframes btnLn3 {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: +100%;
+    }
+}
+
+@keyframes btnLn4 {
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: +100%;
+    }
+}
