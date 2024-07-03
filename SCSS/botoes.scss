@@ -1,6 +1,6 @@
 :root {
     --cor-ln-btn: #ff4700;
-    --cor-txt-btn: #fff;
+    --cor-txt-btn: #ff4700;
 }
 
 // Configuração todas as âncoras
@@ -29,6 +29,7 @@
     overflow: hidden;
     animation: linhaBotao 4s infinite;
     color: var(--cor-txt-btn);
+    font-weight: 600;
 
     .ln {
         position: absolute;

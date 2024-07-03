@@ -92,6 +92,7 @@
   --tela1-cor-titulo: #000;
   --tela1-cor-subtitulo: #fff;
   --tela1-cor-efeito-texto: #fff;
+  --tela1-cor-barra-efeito: #ff4700;
 }
 
 #inicio {
@@ -134,7 +135,7 @@
   width: 100%;
   height: 100%;
   background: var(--tela1-background);
-  border-left: solid 0.1rem var(--tela1-cor-subtitulo);
+  border-left: solid 0.2rem var(--tela1-cor-barra-efeito);
   animation: subtituloEfeito 4s infinite;
 }
 
@@ -148,7 +149,7 @@
 }
 :root {
   --cor-ln-btn: #ff4700;
-  --cor-txt-btn: #fff;
+  --cor-txt-btn: #ff4700;
 }
 
 .botao {
@@ -174,6 +175,7 @@
   overflow: hidden;
   animation: linhaBotao 4s infinite;
   color: var(--cor-txt-btn);
+  font-weight: 600;
 }
 .btn-inscricao .ln {
   position: absolute;
@@ -249,6 +251,7 @@
   font-family: "Zilla Slab", serif;
   font-weight: 400;
   font-style: normal;
+  background-color: transparent;
 }
 .tela .conteiner {
   width: 95%;
