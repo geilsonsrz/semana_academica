@@ -3,7 +3,8 @@
     --tela2-background: #87CEEB;
     --tela2-borda-prog: #000;
     --tela2-cor-letra-prog: #000;
-
+    --tela2-cor-data: #fff;
+    --tela2-cor-hora: #ff4700;
 }
 
 
@@ -40,6 +41,8 @@
         .txtDia {
             font-size: 1.5rem;
             font-weight: 600;
+            color: var(--tela2-cor-data);
+            text-shadow: 0 0 .3rem var(--tela2-cor-data);
             margin-bottom: 1rem;
         }
     }
@@ -54,6 +57,7 @@
         .horario {
             font-size: 1.1rem;
             font-weight: 600;
+            color: var(--tela2-cor-hora);
         }
 
         .local {
