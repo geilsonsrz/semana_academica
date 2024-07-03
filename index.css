@@ -96,6 +96,7 @@
 }
 
 #inicio {
+  display: none;
   background-color: var(--tela1-background);
 }
 #inicio .conteiner {
@@ -147,6 +148,26 @@
     left: 100%;
   }
 }
+:root {
+  --tela2-background: #87CEEB;
+}
+
+#programacoes {
+  background: var(--tela2-background);
+}
+#programacoes .conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20% 0 10% 0;
+  gap: 1.5rem;
+}
+#programacoes .caixaDia {
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --cor-ln-btn: #ff4700;
   --cor-txt-btn: #ff4700;
@@ -242,7 +263,13 @@
     bottom: 100%;
   }
 }
+:root {
+  --tela-divisor: linear-gradient(to right, #0000, #000, #0000);
+  --tela-background: transparent;
+}
+
 .tela {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -251,15 +278,19 @@
   font-family: "Zilla Slab", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: transparent;
+  background: var(--tela-background);
 }
 .tela .conteiner {
   width: 95%;
   height: 85%;
 }
-
-#programacoes {
-  background-color: #991199;
+.tela::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  top: 0;
+  background: var(--tela-divisor);
 }
 
 #contato {
