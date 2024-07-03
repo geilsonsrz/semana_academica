@@ -96,7 +96,6 @@
 }
 
 #inicio {
-  display: none;
   background-color: var(--tela1-background);
 }
 #inicio .conteiner {
@@ -150,6 +149,8 @@
 }
 :root {
   --tela2-background: #87CEEB;
+  --tela2-borda-prog: #000;
+  --tela2-cor-letra-prog: #000;
 }
 
 #programacoes {
@@ -161,11 +162,49 @@
   align-items: center;
   justify-content: center;
   padding: 20% 0 10% 0;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+#programacoes .titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 #programacoes .caixaDia {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+#programacoes .caixaDia .txtDia {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#programacoes .programacao {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+#programacoes .programacao .horario {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#programacoes .programacao .local {
+  font-weight: 600;
+}
+#programacoes .prog-direita {
+  align-items: flex-start;
+  border-left: solid 0.2rem var(--tela2-borda-prog);
+  padding-left: 0.3rem;
+}
+#programacoes .prog-esquerda {
+  align-items: flex-end;
+  border-right: solid 0.2rem var(--tela2-borda-prog);
+  padding-right: 0.3rem;
 }
 
 :root {
