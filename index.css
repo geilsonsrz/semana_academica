@@ -191,7 +191,6 @@
 }
 
 #inicio {
-  display: none;
   background-color: var(--tela1-background);
 }
 #inicio .conteiner {
@@ -252,7 +251,6 @@
 }
 
 #programacoes {
-  display: none;
   background: var(--tela2-background);
 }
 #programacoes .conteiner {
