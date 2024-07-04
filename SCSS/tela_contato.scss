@@ -42,6 +42,16 @@
         border: solid .1rem var(--tela3-borda-foto);
         background-color: var(--tela3-foto-bg);
         background-size: cover;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
     }
 
     .card-info {
@@ -86,9 +96,4 @@
         color: var(--cor-instagram);
 
     }
-}
-
-
-#geilson {
-    background-image: url('../img/geilson.png');
 }
