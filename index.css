@@ -313,7 +313,7 @@
   --tela3-borda-foto: #ff4700;
   --tela3-cor-tel: #ff4700;
   --cor-whatsapp: #15a122;
-  --cor-svg-instagram: #E1306C;
+  --cor-instagram: #E1306C;
 }
 
 #contato {
@@ -384,17 +384,7 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-}
-#instagram a .txt-instagram {
-  background-image: url("../img/instagram.png");
-  background-size: cover;
-  background-position: center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-#instagram a svg {
-  color: var(--cor-svg-instagram);
+  color: var(--cor-instagram);
 }
 
 #geilson {
