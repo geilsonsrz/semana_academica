@@ -26,16 +26,18 @@ document.addEventListener('scroll', () => {
     // Tamanho da navbar
     let altura_navbar = document.querySelector('#navbar').getBoundingClientRect().height
 
-    // Altura da tela
-    let altura_da_tela = window.innerHeight
-
     // Posição atual da tela
     let posicao_tela = window.scrollY
 
+    // Posições das telas
+    let tela_progamacao = document.querySelector('#programacoes').getBoundingClientRect().top
+    let tela_contato = document.querySelector('#contato').getBoundingClientRect().top
+
+    
     // Configuração para alterar a ativação
     switch (true) {
 
-        case (posicao_tela < altura_da_tela-altura_navbar):
+        case (altura_navbar < tela_progamacao ):
             if (navbar_inicio.classList.contains('ativo')) {
                 // Faz nada
             } else {
@@ -45,7 +47,7 @@ document.addEventListener('scroll', () => {
             }
             break;
         
-        case (altura_da_tela-altura_navbar <= posicao_tela && posicao_tela < 2*altura_da_tela-altura_navbar):
+        case (altura_navbar >= tela_progamacao && altura_navbar < tela_contato):
             if (navbar_programacoes.classList.contains('ativo')) {
                 // Faz nada
             } else {
@@ -55,7 +57,7 @@ document.addEventListener('scroll', () => {
             }
             break;
         
-        case (2*altura_da_tela-altura_navbar <= posicao_tela):
+        case (altura_navbar >= tela_contato):
             if (navbar_contato.classList.contains('ativo')) {
                 // Faz nada
             } else {
@@ -65,4 +67,5 @@ document.addEventListener('scroll', () => {
             }
             break;
     }
+
 })
