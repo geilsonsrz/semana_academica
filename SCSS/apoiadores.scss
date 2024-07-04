@@ -2,6 +2,16 @@
 :root {
     --carrocel-bg-card: #ddd;
     --carrocel-capa-card: #0009;
+    --carrocel-borda-titulo: #ff4700;
+}
+
+.titulo-carrocel {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    padding: 0 .5rem;
+    border-bottom: solid .2rem var(--carrocel-borda-titulo);
 }
 
 .area-apoiadores {
@@ -11,7 +21,7 @@
     justify-content: center;
     width: 100%;
     min-height: 5rem;
-    margin: 1rem 0 3rem 0;
+    margin: .5rem 0 3rem 0;
     transform-style: preserve-3d;
     perspective: 2rem;
 
@@ -22,11 +32,11 @@
         width: 5rem;
         height: 5rem;
         transition: .5s;
-        box-shadow: 0 0 1rem .3rem #0005;
+        box-shadow: 0 0 1rem .3rem var(--carrocel-capa-card);
         transform-style: preserve-3d;
         transform-origin: bottom;
         user-select: none;
-        -webkit-box-reflect: below .5rem linear-gradient(transparent, transparent, #0005);
+        -webkit-box-reflect: below .5rem linear-gradient(transparent, transparent, var(--carrocel-capa-card));
         background-color: var(--carrocel-bg-card);
 
         &::after {
@@ -82,6 +92,14 @@
         }
 
         &:nth-child(7) {
+            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            z-index: -1;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(8) {
             transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
             z-index: -1;
             &::after {

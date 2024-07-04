@@ -313,6 +313,7 @@
   --tela3-borda-foto: #000;
   --tela3-cor-tel: #ff4700;
   --cor-whatsapp: #15a122;
+  --cor-svg-instagram: #E1306C;
 }
 
 #contato {
@@ -371,6 +372,31 @@
   justify-content: flex-end;
 }
 
+#instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#instagram a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+#instagram a .txt-instagram {
+  background-image: url("../img/instagram.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#instagram a svg {
+  color: var(--cor-svg-instagram);
+}
+
 #geilson {
   background-image: url("../img/geilson.png");
 }
@@ -378,6 +404,16 @@
 :root {
   --carrocel-bg-card: #ddd;
   --carrocel-capa-card: #0009;
+  --carrocel-borda-titulo: #ff4700;
+}
+
+.titulo-carrocel {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 0 0.5rem;
+  border-bottom: solid 0.2rem var(--carrocel-borda-titulo);
 }
 
 .area-apoiadores {
@@ -387,7 +423,7 @@
   justify-content: center;
   width: 100%;
   min-height: 5rem;
-  margin: 1rem 0 3rem 0;
+  margin: 0.5rem 0 3rem 0;
   transform-style: preserve-3d;
   perspective: 2rem;
 }
@@ -398,11 +434,11 @@
   width: 5rem;
   height: 5rem;
   transition: 0.5s;
-  box-shadow: 0 0 1rem 0.3rem rgba(0, 0, 0, 0.3333333333);
+  box-shadow: 0 0 1rem 0.3rem var(--carrocel-capa-card);
   transform-style: preserve-3d;
   transform-origin: bottom;
   user-select: none;
-  -webkit-box-reflect: below 0.5rem linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3333333333));
+  -webkit-box-reflect: below 0.5rem linear-gradient(transparent, transparent, var(--carrocel-capa-card));
   background-color: var(--carrocel-bg-card);
 }
 .area-apoiadores .apoiador::after {
@@ -457,6 +493,13 @@
 .area-apoiadores .apoiador:nth-child(7)::after {
   background-color: var(--carrocel-capa-card);
 }
+.area-apoiadores .apoiador:nth-child(8) {
+  transform: translate3d(5rem, 0, 0) scale(0.8) rotateY(-10deg);
+  z-index: -1;
+}
+.area-apoiadores .apoiador:nth-child(8)::after {
+  background-color: var(--carrocel-capa-card);
+}
 .area-apoiadores .apoiador img {
   position: absolute;
   top: 0;
@@ -464,6 +507,48 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+:root {
+  --footer-background: #87CEEB;
+  --footer-inf-borda: #000;
+  --footer-inf-after: linear-gradient(to right, #0000, #000, #0000);
+}
+
+footer {
+  background-color: var(--footer-background);
+}
+footer .footer-sup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.3rem;
+}
+footer .footer-inf {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  gap: 0.3rem;
+  padding: 0.3rem 0;
+}
+footer .footer-inf svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+footer .footer-inf span {
+  padding: 0 0 0 0.3rem;
+  border-left: solid 0.1rem var(--footer-inf-borda);
+}
+footer .footer-inf::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  top: 0;
+  background: var(--footer-inf-after);
 }
 
 :root {
