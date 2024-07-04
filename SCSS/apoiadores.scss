@@ -1,0 +1,103 @@
+
+:root {
+    --carrocel-bg-card: #ddd;
+    --carrocel-capa-card: #0007;
+}
+
+.area-apoiadores {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 5rem;
+    margin: 1rem 0 3rem 0;
+    transform-style: preserve-3d;
+    perspective: 2rem;
+
+    .apoiador {
+        position: absolute;
+        top: calc(50% - 2.5rem);
+        left: calc(50% - 2.5rem);
+        width: 5rem;
+        height: 5rem;
+        transition: .5s;
+        box-shadow: 0 0 1rem .3rem #0005;
+        transform-style: preserve-3d;
+        transform-origin: bottom;
+        user-select: none;
+        -webkit-box-reflect: below .5rem linear-gradient(transparent, transparent, #0005);
+        background-color: var(--carrocel-bg-card);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:nth-child(1) {
+            transform: translate3d(-5rem, 0, 0) scale(.8) rotateY(10deg);
+            z-index: 1;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(2) {
+            transform: translate3d(-5rem, 0, 0) scale(.8) rotateY(10deg);
+            z-index: 2;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(3) {
+            transform: translate3d(-2.5rem, 0, 0) scale(.9) rotateY(7deg);
+            z-index: 3;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(4) {
+            transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
+            z-index: 4;
+        }
+
+        &:nth-child(5) {
+            transform: translate3d(2.5rem, 0, 0) scale(.9) rotateY(-7deg);
+            z-index: 3;            
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(6) {
+            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            z-index: 2;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        &:nth-child(7) {
+            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            z-index: -1;
+            &::after {
+                background-color: var(--carrocel-capa-card);
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
