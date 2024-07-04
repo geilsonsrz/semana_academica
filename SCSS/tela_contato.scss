@@ -1,0 +1,78 @@
+
+:root {
+
+    --tela3-background: #87CEEB;
+    --tela3-foto-bg: #001;
+    --tela3-borda-foto: #000;
+    --tela3-cor-tel: #ff4700;
+    --cor-whatsapp: #15a122;
+}
+
+#contato {
+    background-color: var(--tela3-background);
+
+    .conteiner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20% 0 5% 0;
+        gap: 1rem;
+
+        .titulo {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: .2rem;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 1rem;
+
+    .card-foto {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: solid .1rem var(--tela3-borda-foto);
+        background-color: var(--tela3-foto-bg);
+        background-size: cover;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+
+        .card-nome {
+            font-weight: 600;
+            letter-spacing: .1rem;
+        }
+
+        .card-tel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tela3-cor-tel);
+            gap: .3rem;
+
+            svg {
+                color: var(--cor-whatsapp);
+            }
+        }
+    }
+}
+
+.card-esquerda {
+    justify-content: flex-end;
+}
+
+
+#geilson {
+    background-image: url('../img/geilson.png');
+}
+

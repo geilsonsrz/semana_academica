@@ -26,14 +26,11 @@ document.addEventListener('scroll', () => {
     // Tamanho da navbar
     let altura_navbar = document.querySelector('#navbar').getBoundingClientRect().height
 
-    // Posição atual da tela
-    let posicao_tela = window.scrollY
-
     // Posições das telas
     let tela_progamacao = document.querySelector('#programacoes').getBoundingClientRect().top
     let tela_contato = document.querySelector('#contato').getBoundingClientRect().top
 
-    
+
     // Configuração para alterar a ativação
     switch (true) {
 

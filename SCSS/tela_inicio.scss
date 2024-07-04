@@ -12,6 +12,10 @@
 
 
 #inicio {
+
+    // DESENVOLVIMENTO TELA 3
+    display: none;
+
     
     background-color: var(--tela1-background);
 
@@ -47,7 +51,6 @@
                 .textoSecundario {
                     position: relative;
                     color: var(--tela1-cor-subtitulo);
-                    // border-bottom: solid .2rem var(--tela1-cor-barra-efeito);
 
                     &::before {
                         content: '';
@@ -56,7 +59,6 @@
                         height: 100%;
                         background: var(--tela1-background);
                         border-left: solid .2rem var(--tela1-cor-barra-efeito);
-                        // border-bottom: solid .2rem var(--tela1-background);
                         animation: subtituloEfeito 4s infinite;
                     }
 

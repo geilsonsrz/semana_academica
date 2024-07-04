@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
 // Componentes
+@import './botoes.scss';
 @import './tela_inicio.scss';
 @import './tela_program.scss';
-@import './botoes.scss';
+@import './tela_contato.scss';
 
 
 :root {
@@ -35,12 +36,8 @@
         position: absolute;
         width: 100%;
         height: .2rem;
-        top: 0;
+        bottom: 0;
         background: var(--tela-divisor)
     }
 }
 
-
-#contato {
-    background-color: #cc3311;
-}
