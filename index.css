@@ -248,6 +248,8 @@
   --tela2-cor-letra-prog: #000;
   --tela2-cor-data: #fff;
   --tela2-cor-hora: #ff4700;
+  --tela2-bg-data: #0007;
+  --tela2-bg-aconteceu: #000b;
 }
 
 #programacoes {
@@ -280,8 +282,12 @@
   color: var(--tela2-cor-data);
   text-shadow: 0 0 0.3rem var(--tela2-cor-data);
   margin-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--tela2-bg-data);
 }
 #programacoes .programacao {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -295,6 +301,7 @@
 }
 #programacoes .programacao .local {
   font-weight: 600;
+  font-size: 0.9rem;
 }
 #programacoes .prog-direita {
   align-items: flex-start;
@@ -306,7 +313,40 @@
   border-right: solid 0.2rem var(--tela2-borda-prog);
   padding-right: 0.3rem;
 }
+#programacoes .acontecendo {
+  border: none;
+  border-radius: 0.3rem;
+  animation: acontecendo 1s infinite;
+}
+#programacoes .aconteceu::after {
+  content: "ACONTECEU";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  letter-spacing: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  color: var(--tela2-cor-data);
+  text-shadow: 0 0 0.3rem var(--tela2-cor-data);
+  background-color: var(--tela2-bg-aconteceu);
+}
 
+@keyframes acontecendo {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.7333333333);
+    box-shadow: 0 0 0.1rem 0.1rem #fff;
+  }
+  50% {
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem 0.7rem #fff;
+  }
+}
 :root {
   --tela3-background: #87CEEB;
   --tela3-foto-bg: #fff;
