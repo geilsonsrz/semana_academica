@@ -303,12 +303,12 @@
   font-weight: 600;
   font-size: 0.9rem;
 }
-#programacoes .prog-direita {
+#programacoes .prog-esquerda {
   align-items: flex-start;
   border-left: solid 0.2rem var(--tela2-borda-prog);
   padding-left: 0.3rem;
 }
-#programacoes .prog-esquerda {
+#programacoes .prog-direita {
   align-items: flex-end;
   border-right: solid 0.2rem var(--tela2-borda-prog);
   padding-right: 0.3rem;
