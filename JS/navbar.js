@@ -13,6 +13,8 @@ function ativarLink() {
     itens.forEach(item => item.classList.remove('ativo'))
     // Adicionar só no item clicado
     this.classList.add('ativo')
+
+
 }
 
 

@@ -12,13 +12,14 @@ import './JS/carrocel.js'
 
 
 
+
+
 // // Enquanto não se define o local
 // let locais = document.querySelectorAll(".local")
 
 // locais.forEach( local => {
 //     local.textContent = 'A definir'
 // })
-
 
 
 
