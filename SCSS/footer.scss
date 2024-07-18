@@ -51,6 +51,23 @@ footer {
 }
 
 
+@media (min-width: 720px) {
+
+    footer {
+        
+            .footer-sup {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        
+            .footer-inf {
+                font-size: .9rem;
+            }
+
+    }
+
+}
+
 
 
 

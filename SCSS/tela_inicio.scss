@@ -1,5 +1,3 @@
-
-
 // TELA INICIAL
 :root {
     --tela1-background: #87CEEB;
@@ -12,7 +10,7 @@
 
 
 #inicio {
-    
+
     background-color: var(--tela1-background);
 
     .conteiner {
@@ -69,7 +67,8 @@
 
 @keyframes subtituloEfeito {
 
-    0%, 100% {
+    0%,
+    100% {
         left: 0%;
     }
 
@@ -81,3 +80,39 @@
 
 
 
+@media (min-width: 720px) {
+    #inicio {
+
+        .conteiner {
+
+            justify-content: space-around;
+
+            .texto {
+                // font-size: 1.5rem;
+                gap: 1em;
+
+                #titulo-principal {
+                    font-size: 4rem;
+                }
+
+                .subtitulo {
+                    font-size: 2rem;
+                    gap: 0.5em;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    #inicio {
+
+        .conteiner {
+
+            margin-top: 10%;
+        }
+    }
+}

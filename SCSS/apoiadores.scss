@@ -21,7 +21,7 @@
     justify-content: center;
     width: 100%;
     min-height: 5rem;
-    margin: .5rem 0 3rem 0;
+    margin: .5rem 0 4rem 0;
     transform-style: preserve-3d;
     perspective: 2rem;
 
@@ -36,7 +36,7 @@
         transform-style: preserve-3d;
         transform-origin: bottom;
         user-select: none;
-        -webkit-box-reflect: below .5rem linear-gradient(transparent, transparent, var(--carrocel-capa-card));
+        -webkit-box-reflect: below .5rem linear-gradient(transparent, var(--carrocel-capa-card));
         background-color: var(--carrocel-bg-card);
 
         &::after {
@@ -47,7 +47,7 @@
         }
 
         &:nth-child(1) {
-            transform: translate3d(-5rem, 0, 0) scale(.8) rotateY(10deg);
+            transform: translate3d(-5rem, 0, 0) scale(.7) rotateY(10deg);
             z-index: 1;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -55,7 +55,7 @@
         }
 
         &:nth-child(2) {
-            transform: translate3d(-5rem, 0, 0) scale(.8) rotateY(10deg);
+            transform: translate3d(-5rem, 0, 0) scale(.7) rotateY(10deg);
             z-index: 2;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -63,7 +63,7 @@
         }
 
         &:nth-child(3) {
-            transform: translate3d(-2.5rem, 0, 0) scale(.9) rotateY(7deg);
+            transform: translate3d(-2.5rem, 0, 0) scale(.8) rotateY(7deg);
             z-index: 3;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -72,11 +72,11 @@
 
         &:nth-child(4) {
             transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
-            z-index: 4;
+            z-index: 10;
         }
 
         &:nth-child(5) {
-            transform: translate3d(2.5rem, 0, 0) scale(.9) rotateY(-7deg);
+            transform: translate3d(2.5rem, 0, 0) scale(.8) rotateY(-7deg);
             z-index: 3;            
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -84,7 +84,7 @@
         }
 
         &:nth-child(6) {
-            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            transform: translate3d(5rem, 0, 0) scale(.7) rotateY(-10deg);
             z-index: 2;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -92,7 +92,7 @@
         }
 
         &:nth-child(7) {
-            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            transform: translate3d(5rem, 0, 0) scale(.7) rotateY(-10deg);
             z-index: -1;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -100,7 +100,7 @@
         }
 
         &:nth-child(8) {
-            transform: translate3d(5rem, 0, 0) scale(.8) rotateY(-10deg);
+            transform: translate3d(5rem, 0, 0) scale(.7) rotateY(-10deg);
             z-index: -1;
             &::after {
                 background-color: var(--carrocel-capa-card);
@@ -117,5 +117,77 @@
         }
     }
 }
+
+
+
+@media (min-width: 768px) {
+
+    .titulo-carrocel {
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    padding: 0 .7rem;
+}
+
+.area-apoiadores {
+    min-height: 7rem;
+    margin: 3rem 0 7rem 0;
+    perspective: 3rem;
+
+    .apoiador {
+        top: calc(50% - 4rem);
+        left: calc(50% - 4rem);
+        width: 7rem;
+        height: 7rem;
+        box-shadow: 0 0 1rem .3rem var(--carrocel-capa-card);
+        -webkit-box-reflect: below 1rem linear-gradient(transparent, var(--carrocel-capa-card));
+
+
+        &:nth-child(1) {
+            transform: translate3d(-15rem, 0, 0) scale(.6) rotateY(10deg);
+        }
+
+        &:nth-child(2) {
+            transform: translate3d(-15rem, 0, 0) scale(.6) rotateY(10deg);
+        }
+
+        &:nth-child(3) {
+            transform: translate3d(-7.5rem, 0, 0) scale(.7) rotateY(7deg);
+        }
+
+        &:nth-child(4) {
+            transform: translate3d(0, 0, 0) scale(1.2) rotateY(0deg);
+        }
+
+        &:nth-child(5) {
+            transform: translate3d(7.5rem, 0, 0) scale(.7) rotateY(-7deg);
+        }
+
+        &:nth-child(6) {
+            transform: translate3d(15rem, 0, 0) scale(.6) rotateY(-10deg);
+        }
+
+        &:nth-child(7) {
+            transform: translate3d(15rem, 0, 0) scale(.6) rotateY(-10deg);
+
+        }
+
+        &:nth-child(8) {
+            transform: translate3d(15rem, 0, 0) scale(.6) rotateY(-10deg);
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+    
+}
+
+
 
 

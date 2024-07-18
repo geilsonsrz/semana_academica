@@ -22,7 +22,6 @@
         justify-content: center;
         padding: 20% 0 10% 0;
         gap: 1rem;
-
     }
 
     .titulo {
@@ -42,11 +41,12 @@
 
         .txtDia {
             font-size: 1.5rem;
+            letter-spacing: .2rem;
             font-weight: 600;
             color: var(--tela2-cor-data);
-            text-shadow: 0 0 .3rem var(--tela2-cor-data);
+            // text-shadow: 0 0 .3rem var(--tela2-cor-data);
             margin-bottom: 1rem;
-            padding: .2rem .5rem;
+            padding: .3rem 1rem;
             border-radius: 1rem;
             background-color: var(--tela2-bg-data);
         }
@@ -130,5 +130,71 @@
 
 
 
+@media (min-width: 375px) and (max-width: 425px) {
+
+    #programacoes {
+        .conteiner {
+            padding: 15% 0 5% 0;
+        }
+    }
+    
+}
+
+@media (min-width: 426px) and (max-width: 719px) {
+
+    #programacoes {
+        .conteiner {
+            padding: 10% 0 5% 0;
+        }
+    }
+    
+}
+
+
+@media (min-width: 720px) {
+
+    #programacoes {
+        .conteiner {
+            font-size: 1.2rem;
+            padding: 10% 0 5% 0;
+        }
+    }
+    
+}
+
+@media (min-width: 1024px) {
+
+    #programacoes {
+        .conteiner {
+            font-size: 1.2rem;
+            padding: 6% 0 5% 0;
+        }
+
+        .programacao {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: 15%;
+            margin-right: 15%;
+    
+            .horario {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--tela2-cor-hora);
+            }
+
+            .atividade {
+                font-size: 1.2rem;
+            }
+    
+            .local {
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+    
+        }
+
+    }
+}
 
 

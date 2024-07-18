@@ -100,3 +100,37 @@
         text-shadow: -0.1rem 0.1rem .2rem var(--n2cor5);
     }
 }
+
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .navbar {
+        height: 3.5rem;
+    
+        .item-navbar {
+            height: 2em;
+        }
+    
+        .icon-navbar {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-top: 1rem;
+    
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    
+        .txt-navbar {
+            font-size: 1rem;
+            letter-spacing: .1rem;
+        }
+    }
+    
+
+    
+    
+}

@@ -87,6 +87,27 @@
     text-shadow: -0.1rem 0.1rem 0.2rem var(--n2cor5);
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    height: 3.5rem;
+  }
+  .navbar .item-navbar {
+    height: 2em;
+  }
+  .navbar .icon-navbar {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+  .navbar .icon-navbar svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .navbar .txt-navbar {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
 :root {
   --cor-ln-btn: #ff4700;
   --cor-txt-btn: #ff4700;
@@ -242,6 +263,26 @@
     left: 100%;
   }
 }
+@media (min-width: 720px) {
+  #inicio .conteiner {
+    justify-content: space-around;
+  }
+  #inicio .conteiner .texto {
+    gap: 1em;
+  }
+  #inicio .conteiner .texto #titulo-principal {
+    font-size: 4rem;
+  }
+  #inicio .conteiner .texto .subtitulo {
+    font-size: 2rem;
+    gap: 0.5em;
+  }
+}
+@media (min-width: 1024px) {
+  #inicio .conteiner {
+    margin-top: 10%;
+  }
+}
 :root {
   --tela2-background: #87CEEB;
   --tela2-borda-prog: #000;
@@ -278,11 +319,11 @@
 }
 #programacoes .caixaDia .txtDia {
   font-size: 1.5rem;
+  letter-spacing: 0.2rem;
   font-weight: 600;
   color: var(--tela2-cor-data);
-  text-shadow: 0 0 0.3rem var(--tela2-cor-data);
   margin-bottom: 1rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 1rem;
   border-radius: 1rem;
   background-color: var(--tela2-bg-data);
 }
@@ -347,6 +388,47 @@
     box-shadow: 0 0 0.5rem 0.7rem #fff;
   }
 }
+@media (min-width: 375px) and (max-width: 425px) {
+  #programacoes .conteiner {
+    padding: 15% 0 5% 0;
+  }
+}
+@media (min-width: 426px) and (max-width: 719px) {
+  #programacoes .conteiner {
+    padding: 10% 0 5% 0;
+  }
+}
+@media (min-width: 720px) {
+  #programacoes .conteiner {
+    font-size: 1.2rem;
+    padding: 10% 0 5% 0;
+  }
+}
+@media (min-width: 1024px) {
+  #programacoes .conteiner {
+    font-size: 1.2rem;
+    padding: 6% 0 5% 0;
+  }
+  #programacoes .programacao {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  #programacoes .programacao .horario {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tela2-cor-hora);
+  }
+  #programacoes .programacao .atividade {
+    font-size: 1.2rem;
+  }
+  #programacoes .programacao .local {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
 :root {
   --tela3-background: #87CEEB;
   --tela3-foto-bg: #fff;
@@ -364,7 +446,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20% 0 5% 0;
+  margin-top: 20%;
   gap: 1rem;
 }
 #contato .conteiner .titulo {
@@ -436,6 +518,59 @@
   color: var(--cor-instagram);
 }
 
+@media (min-width: 375px) and (max-width: 425px) {
+  #contato .conteiner {
+    margin-top: 15%;
+  }
+}
+@media (min-width: 426px) and (max-width: 719px) {
+  #contato .conteiner {
+    margin-top: 10%;
+  }
+}
+@media (min-width: 720px) {
+  #contato .conteiner {
+    margin-top: 10%;
+  }
+  #contato .conteiner .titulo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+  }
+  #contato .card {
+    gap: 1.5rem;
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+  #contato .card .card-foto {
+    width: 5rem;
+    height: 5rem;
+  }
+  #contato .card .card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  #contato .card .card-info .card-nome {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+  #contato .card .card-info .card-tel {
+    font-size: 1.2rem;
+    font-weight: 600;
+    gap: 0.5rem;
+  }
+  #contato .card .card-info .card-tel svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #instagram {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  #instagram a {
+    gap: 0.5rem;
+  }
+}
 :root {
   --carrocel-bg-card: #ddd;
   --carrocel-capa-card: #0009;
@@ -458,7 +593,7 @@
   justify-content: center;
   width: 100%;
   min-height: 5rem;
-  margin: 0.5rem 0 3rem 0;
+  margin: 0.5rem 0 4rem 0;
   transform-style: preserve-3d;
   perspective: 2rem;
 }
@@ -473,7 +608,7 @@
   transform-style: preserve-3d;
   transform-origin: bottom;
   user-select: none;
-  -webkit-box-reflect: below 0.5rem linear-gradient(transparent, transparent, var(--carrocel-capa-card));
+  -webkit-box-reflect: below 0.5rem linear-gradient(transparent, var(--carrocel-capa-card));
   background-color: var(--carrocel-bg-card);
 }
 .area-apoiadores .apoiador::after {
@@ -483,21 +618,21 @@
   height: 100%;
 }
 .area-apoiadores .apoiador:nth-child(1) {
-  transform: translate3d(-5rem, 0, 0) scale(0.8) rotateY(10deg);
+  transform: translate3d(-5rem, 0, 0) scale(0.7) rotateY(10deg);
   z-index: 1;
 }
 .area-apoiadores .apoiador:nth-child(1)::after {
   background-color: var(--carrocel-capa-card);
 }
 .area-apoiadores .apoiador:nth-child(2) {
-  transform: translate3d(-5rem, 0, 0) scale(0.8) rotateY(10deg);
+  transform: translate3d(-5rem, 0, 0) scale(0.7) rotateY(10deg);
   z-index: 2;
 }
 .area-apoiadores .apoiador:nth-child(2)::after {
   background-color: var(--carrocel-capa-card);
 }
 .area-apoiadores .apoiador:nth-child(3) {
-  transform: translate3d(-2.5rem, 0, 0) scale(0.9) rotateY(7deg);
+  transform: translate3d(-2.5rem, 0, 0) scale(0.8) rotateY(7deg);
   z-index: 3;
 }
 .area-apoiadores .apoiador:nth-child(3)::after {
@@ -505,31 +640,31 @@
 }
 .area-apoiadores .apoiador:nth-child(4) {
   transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
-  z-index: 4;
+  z-index: 10;
 }
 .area-apoiadores .apoiador:nth-child(5) {
-  transform: translate3d(2.5rem, 0, 0) scale(0.9) rotateY(-7deg);
+  transform: translate3d(2.5rem, 0, 0) scale(0.8) rotateY(-7deg);
   z-index: 3;
 }
 .area-apoiadores .apoiador:nth-child(5)::after {
   background-color: var(--carrocel-capa-card);
 }
 .area-apoiadores .apoiador:nth-child(6) {
-  transform: translate3d(5rem, 0, 0) scale(0.8) rotateY(-10deg);
+  transform: translate3d(5rem, 0, 0) scale(0.7) rotateY(-10deg);
   z-index: 2;
 }
 .area-apoiadores .apoiador:nth-child(6)::after {
   background-color: var(--carrocel-capa-card);
 }
 .area-apoiadores .apoiador:nth-child(7) {
-  transform: translate3d(5rem, 0, 0) scale(0.8) rotateY(-10deg);
+  transform: translate3d(5rem, 0, 0) scale(0.7) rotateY(-10deg);
   z-index: -1;
 }
 .area-apoiadores .apoiador:nth-child(7)::after {
   background-color: var(--carrocel-capa-card);
 }
 .area-apoiadores .apoiador:nth-child(8) {
-  transform: translate3d(5rem, 0, 0) scale(0.8) rotateY(-10deg);
+  transform: translate3d(5rem, 0, 0) scale(0.7) rotateY(-10deg);
   z-index: -1;
 }
 .area-apoiadores .apoiador:nth-child(8)::after {
@@ -544,6 +679,50 @@
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .titulo-carrocel {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    padding: 0 0.7rem;
+  }
+  .area-apoiadores {
+    min-height: 7rem;
+    margin: 3rem 0 7rem 0;
+    perspective: 3rem;
+  }
+  .area-apoiadores .apoiador {
+    top: calc(50% - 4rem);
+    left: calc(50% - 4rem);
+    width: 7rem;
+    height: 7rem;
+    box-shadow: 0 0 1rem 0.3rem var(--carrocel-capa-card);
+    -webkit-box-reflect: below 1rem linear-gradient(transparent, var(--carrocel-capa-card));
+  }
+  .area-apoiadores .apoiador:nth-child(1) {
+    transform: translate3d(-15rem, 0, 0) scale(0.6) rotateY(10deg);
+  }
+  .area-apoiadores .apoiador:nth-child(2) {
+    transform: translate3d(-15rem, 0, 0) scale(0.6) rotateY(10deg);
+  }
+  .area-apoiadores .apoiador:nth-child(3) {
+    transform: translate3d(-7.5rem, 0, 0) scale(0.7) rotateY(7deg);
+  }
+  .area-apoiadores .apoiador:nth-child(4) {
+    transform: translate3d(0, 0, 0) scale(1.2) rotateY(0deg);
+  }
+  .area-apoiadores .apoiador:nth-child(5) {
+    transform: translate3d(7.5rem, 0, 0) scale(0.7) rotateY(-7deg);
+  }
+  .area-apoiadores .apoiador:nth-child(6) {
+    transform: translate3d(15rem, 0, 0) scale(0.6) rotateY(-10deg);
+  }
+  .area-apoiadores .apoiador:nth-child(7) {
+    transform: translate3d(15rem, 0, 0) scale(0.6) rotateY(-10deg);
+  }
+  .area-apoiadores .apoiador:nth-child(8) {
+    transform: translate3d(15rem, 0, 0) scale(0.6) rotateY(-10deg);
+  }
+}
 :root {
   --footer-background: #87CEEB;
   --footer-inf-borda: #000;
@@ -586,6 +765,15 @@ footer .footer-inf::after {
   background: var(--footer-inf-after);
 }
 
+@media (min-width: 720px) {
+  footer .footer-sup {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  footer .footer-inf {
+    font-size: 0.9rem;
+  }
+}
 :root {
   --tela-divisor: linear-gradient(to right, #0000, #000, #0000);
   --tela-background: transparent;
